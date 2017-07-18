@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XWGiPicViewController : UIViewController
+@interface XWGiPicViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+{
+    UIImagePickerController *select;
+    UIImage *picture;
+    
+    IBOutlet UILabel *doneLabel;
+    IBOutlet UIButton *resetButtonOutlet;
+}
+
+-(IBAction)loadButton:(id)sender;
+-(IBAction)resetButton:(id)sender;
+
 
 @end
